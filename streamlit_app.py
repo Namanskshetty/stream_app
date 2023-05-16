@@ -46,3 +46,4 @@ my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values('"+add_my
 if len(add_my_fruit)!=0:
   streamlit.write('Thanks for adding ', add_my_fruit)
 
+streamlit.stop()
