@@ -30,11 +30,6 @@ fruit_choice = streamlit.text_input('What fruit would you like information about
 streamlit.write('The user entered ', fruit_choice)
 fruityvice_response=requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
 # it normilize the json function for the data
-streamlit.text(fruityvice_response)
-if fruityvice_response==<Response [404]>:
-  streamlit.text("hi")
-else:
-  streamlit.text("bye")
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # onverts the data into table
 streamlit.dataframe(fruityvice_normalized)
