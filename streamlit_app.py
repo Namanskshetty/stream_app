@@ -33,7 +33,7 @@ fruityvice_response=requests.get("https://fruityvice.com/api/fruit/"+fruit_choic
 streamlit.text(fruityvice_response)
 if fruityvice_response=="<Response [404]>":
   streamlit.text("hi")
-elae:
+else:
   streamlit.text("bye")
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # onverts the data into table
