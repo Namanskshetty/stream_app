@@ -31,7 +31,7 @@ streamlit.write('The user entered ', fruit_choice)
 fruityvice_response=requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
 # it normilize the json function for the data
 streamlit.text(fruityvice_response)
-if fruityvice_response=="<Response [404]>":
+if fruityvice_response==<Response [404]>:
   streamlit.text("hi")
 else:
   streamlit.text("bye")
